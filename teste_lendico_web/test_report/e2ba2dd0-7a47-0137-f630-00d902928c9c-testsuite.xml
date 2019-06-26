@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1561557119956" stop="1561557288151">
+  <name>Nova pagina de cadastro de endere&#xE7;os lendico</name>
+  <title>Nova pagina de cadastro de endere&#xE7;os lendico</title>
+  <test-cases>
+    <test-case start="1561557119957" stop="1561557181052" status="failed">
+      <name>validar obrigatoriedade campos para cadastro de novo endere&#xE7;o</name>
+      <title>validar obrigatoriedade campos para cadastro de novo endere&#xE7;o</title>
+      <failure>
+        <message>Unable to find css "a[data-test=\"addresses\"]"</message>
+        <stack-trace>./features/pages/PaginaInicialPage.rb:84:in `obrigatoriedade_campos'&#xD;
+./features/steps_definitions/validarCadastroEndereco.rb:7:in `"eu nao preencher meus dados pessoais e criar o novo endere&#xE7;o"'&#xD;
+features/specifications/validarCadastroEndereco.feature:14:in `Quando eu nao preencher meus dados pessoais e criar o novo endere&#xE7;o'</stack-trace>
+      </failure>
+      <steps>
+        <step start="1561557180494" stop="1561557180494" status="passed">
+          <name>Dado que eu seja um usuario inscrito</name>
+          <title>Dado que eu seja um usuario inscrito</title>
+          <attachments/>
+        </step>
+        <step start="1561557180494" stop="1561557180494" status="failed">
+          <name>Quando eu nao preencher meus dados pessoais e criar o novo endere&#xE7;o</name>
+          <title>Quando eu nao preencher meus dados pessoais e criar o novo endere&#xE7;o</title>
+          <attachments/>
+        </step>
+        <step start="1561557180494" stop="1561557180494" status="canceled">
+          <name>Ent&#xE3;o devera exibir a mensagem de erro "5 errors prohibited this address from being saved:" para os campos obrigatorios</name>
+          <title>Ent&#xE3;o devera exibir a mensagem de erro "5 errors prohibited this address from being saved:" para os campos obrigatorios</title>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments>
+        <attachment source="9a1b0434d8718d7d48c76651cf5504b96d18277c638b9b749b29480c68b6c7bb-attachment" title="Click here" size="13615" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="40202460"/>
+        <label name="host" value="dbs-note-473"/>
+        <label name="feature" value="Nova pagina de cadastro de endere&#xE7;os lendico"/>
+        <label name="story" value="validar obrigatoriedade campos para cadastro de novo endere&#xE7;o"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1561557181053" stop="1561557217758" status="failed">
+      <name>Realizar o cadastro de novo endere&#xE7;o</name>
+      <title>Realizar o cadastro de novo endere&#xE7;o</title>
+      <failure>
+        <message>Unable to find css "a[data-test=\"addresses\"]"</message>
+        <stack-trace>./features/pages/PaginaInicialPage.rb:59:in `cadastrar_endereco'&#xD;
+./features/steps_definitions/validarCadastroEndereco.rb:20:in `"eu preencher meus dados pessoais e criar o novo endere&#xE7;o"'&#xD;
+features/specifications/validarCadastroEndereco.feature:19:in `Quando eu preencher meus dados pessoais e criar o novo endere&#xE7;o'</stack-trace>
+      </failure>
+      <steps>
+        <step start="1561557217332" stop="1561557217332" status="passed">
+          <name>Dado que eu seja um usuario inscrito</name>
+          <title>Dado que eu seja um usuario inscrito</title>
+          <attachments/>
+        </step>
+        <step start="1561557217332" stop="1561557217332" status="failed">
+          <name>Quando eu preencher meus dados pessoais e criar o novo endere&#xE7;o</name>
+          <title>Quando eu preencher meus dados pessoais e criar o novo endere&#xE7;o</title>
+          <attachments/>
+        </step>
+        <step start="1561557217332" stop="1561557217332" status="canceled">
+          <name>Ent&#xE3;o devera exibir os dados do endere&#xE7;o cadastrado e a mensagem "Address was successfully created."</name>
+          <title>Ent&#xE3;o devera exibir os dados do endere&#xE7;o cadastrado e a mensagem "Address was successfully created."</title>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments>
+        <attachment source="1ded955d3f79e6fca9049ed02eee1f3ce2a2754bfd092ab314cd73be3d63ddda-attachment.png" title="Click here" size="14490" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="40202460"/>
+        <label name="host" value="dbs-note-473"/>
+        <label name="feature" value="Nova pagina de cadastro de endere&#xE7;os lendico"/>
+        <label name="story" value="Realizar o cadastro de novo endere&#xE7;o"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1561557217759" stop="1561557222770" status="passed">
+      <name>Consultar novo endere&#xE7;o cadastrado</name>
+      <title>Consultar novo endere&#xE7;o cadastrado</title>
+      <steps>
+        <step start="1561557222369" stop="1561557222369" status="passed">
+          <name>Dado que eu seja um usuario inscrito</name>
+          <title>Dado que eu seja um usuario inscrito</title>
+          <attachments/>
+        </step>
+        <step start="1561557222369" stop="1561557222369" status="passed">
+          <name>Quando acessar a lista de enderecos cadastrado</name>
+          <title>Quando acessar a lista de enderecos cadastrado</title>
+          <attachments/>
+        </step>
+        <step start="1561557222369" stop="1561557222410" status="passed">
+          <name>Ent&#xE3;o devera exibir a lista com todos enderecos cadastrado com sucesso</name>
+          <title>Ent&#xE3;o devera exibir a lista com todos enderecos cadastrado com sucesso</title>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments>
+        <attachment source="66676c5ee0c23add8c0d685e79633640058bf382d216adf3bc3c9887fceccd23-attachment.png" title="Click here" size="25465" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="40202460"/>
+        <label name="host" value="dbs-note-473"/>
+        <label name="feature" value="Nova pagina de cadastro de endere&#xE7;os lendico"/>
+        <label name="story" value="Consultar novo endere&#xE7;o cadastrado"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1561557222771" stop="1561557255444" status="failed">
+      <name>Alterar novo endere&#xE7;o cadastrado</name>
+      <title>Alterar novo endere&#xE7;o cadastrado</title>
+      <failure>
+        <message>Unable to find xpath "/html/body/div/table/tbody/tr/td[6]/a"</message>
+        <stack-trace>./features/pages/PaginaInicialPage.rb:127:in `editar_lista_enderecos'&#xD;
+./features/steps_definitions/validarCadastroEndereco.rb:36:in `"acessar a lista de enderecos cadastrado e alterar o endereco"'&#xD;
+features/specifications/validarCadastroEndereco.feature:29:in `Quando acessar a lista de enderecos cadastrado e alterar o endereco'</stack-trace>
+      </failure>
+      <steps>
+        <step start="1561557255022" stop="1561557255022" status="passed">
+          <name>Dado que eu seja um usuario inscrito</name>
+          <title>Dado que eu seja um usuario inscrito</title>
+          <attachments/>
+        </step>
+        <step start="1561557255022" stop="1561557255022" status="failed">
+          <name>Quando acessar a lista de enderecos cadastrado e alterar o endereco</name>
+          <title>Quando acessar a lista de enderecos cadastrado e alterar o endereco</title>
+          <attachments/>
+        </step>
+        <step start="1561557255022" stop="1561557255022" status="canceled">
+          <name>Ent&#xE3;o devera exibir os dados do endere&#xE7;o alterado e a mensagem "Address was successfully updated."</name>
+          <title>Ent&#xE3;o devera exibir os dados do endere&#xE7;o alterado e a mensagem "Address was successfully updated."</title>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments>
+        <attachment source="02dea41377ca4c454935c8580dcde8ae083605b3d48bd8e1b95041656d8988e1-attachment.png" title="Click here" size="16129" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="40202460"/>
+        <label name="host" value="dbs-note-473"/>
+        <label name="feature" value="Nova pagina de cadastro de endere&#xE7;os lendico"/>
+        <label name="story" value="Alterar novo endere&#xE7;o cadastrado"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1561557255445" stop="1561557288151" status="failed">
+      <name>Deletar novo endere&#xE7;o cadastrado</name>
+      <title>Deletar novo endere&#xE7;o cadastrado</title>
+      <failure>
+        <message>Unable to find xpath "/html/body/div/table/tbody/tr/td[7]/a"</message>
+        <stack-trace>./features/pages/PaginaInicialPage.rb:139:in `deletar_endereco'&#xD;
+./features/steps_definitions/validarCadastroEndereco.rb:44:in `"acessar a lista de enderecos cadastrado e deletar o endereco"'&#xD;
+features/specifications/validarCadastroEndereco.feature:34:in `Quando acessar a lista de enderecos cadastrado e deletar o endereco'</stack-trace>
+      </failure>
+      <steps>
+        <step start="1561557287639" stop="1561557287639" status="passed">
+          <name>Dado que eu seja um usuario inscrito</name>
+          <title>Dado que eu seja um usuario inscrito</title>
+          <attachments/>
+        </step>
+        <step start="1561557287639" stop="1561557287639" status="failed">
+          <name>Quando acessar a lista de enderecos cadastrado e deletar o endereco</name>
+          <title>Quando acessar a lista de enderecos cadastrado e deletar o endereco</title>
+          <attachments/>
+        </step>
+        <step start="1561557287639" stop="1561557287640" status="canceled">
+          <name>Ent&#xE3;o devera exibir a mensagem "Address was successfully destroyed."</name>
+          <title>Ent&#xE3;o devera exibir a mensagem "Address was successfully destroyed."</title>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments>
+        <attachment source="02dea41377ca4c454935c8580dcde8ae083605b3d48bd8e1b95041656d8988e1-attachment.png" title="Click here" size="16129" type="image/png"/>
+      </attachments>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="40202460"/>
+        <label name="host" value="dbs-note-473"/>
+        <label name="feature" value="Nova pagina de cadastro de endere&#xE7;os lendico"/>
+        <label name="story" value="Deletar novo endere&#xE7;o cadastrado"/>
+      </labels>
+      <parameters/>
+    </test-case>
+  </test-cases>
+  <labels>
+    <label name="severity" value="normal"/>
+    <label name="thread" value="40202460"/>
+    <label name="host" value="dbs-note-473"/>
+  </labels>
+</ns2:test-suite>
