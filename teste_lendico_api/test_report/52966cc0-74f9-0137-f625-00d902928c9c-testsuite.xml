@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<ns2:test-suite xmlns="" xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1560973787643" stop="1560973789967">
+  <name>API Via CEP</name>
+  <title>API Via CEP</title>
+  <test-cases>
+    <test-case start="1560973788312" stop="1560973788838" status="passed">
+      <name>Validar busca de endere&#xE7;o por CEP existente</name>
+      <title>Validar busca de endere&#xE7;o por CEP existente</title>
+      <steps>
+        <step start="1560973788836" stop="1560973788836" status="passed">
+          <name>Dado que eu acesse a API de busca de endere&#xE7;o</name>
+          <title>Dado que eu acesse a API de busca de endere&#xE7;o</title>
+          <attachments/>
+        </step>
+        <step start="1560973788836" stop="1560973788836" status="passed">
+          <name>Quando informa o cep inexistente para buscar enderecos no metodo GET</name>
+          <title>Quando informa o cep inexistente para buscar enderecos no metodo GET</title>
+          <attachments/>
+        </step>
+        <step start="1560973788836" stop="1560973788838" status="passed">
+          <name>Ent&#xE3;o devera retornar a mensagem com o valor de "erro" igual a "true"</name>
+          <title>Ent&#xE3;o devera retornar a mensagem com o valor de "erro" igual a "true"</title>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="40005840"/>
+        <label name="host" value="dbs-note-473"/>
+        <label name="feature" value="API Via CEP"/>
+        <label name="story" value="Validar busca de endere&#xE7;o por CEP existente"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1560973788838" stop="1560973789365" status="passed">
+      <name>Validar formato CEP com mais de 8 digitos</name>
+      <title>Validar formato CEP com mais de 8 digitos</title>
+      <steps>
+        <step start="1560973789357" stop="1560973789357" status="passed">
+          <name>Dado que eu acesse a API de busca de endere&#xE7;o</name>
+          <title>Dado que eu acesse a API de busca de endere&#xE7;o</title>
+          <attachments/>
+        </step>
+        <step start="1560973789357" stop="1560973789358" status="passed">
+          <name>Quando informa o cep com mais de 8 digitos para buscar enderecos no metodo GET</name>
+          <title>Quando informa o cep com mais de 8 digitos para buscar enderecos no metodo GET</title>
+          <attachments/>
+        </step>
+        <step start="1560973789358" stop="1560973789365" status="passed">
+          <name>Ent&#xE3;o devera retornar a mensagem de erro "ViaCEP Bad Request" e status code 400</name>
+          <title>Ent&#xE3;o devera retornar a mensagem de erro "ViaCEP Bad Request" e status code 400</title>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="40005840"/>
+        <label name="host" value="dbs-note-473"/>
+        <label name="feature" value="API Via CEP"/>
+        <label name="story" value="Validar formato CEP com mais de 8 digitos"/>
+      </labels>
+      <parameters/>
+    </test-case>
+    <test-case start="1560973789367" stop="1560973789881" status="passed">
+      <name>Validar busca de endere&#xE7;o por CEP alfanum&#xE9;rico</name>
+      <title>Validar busca de endere&#xE7;o por CEP alfanum&#xE9;rico</title>
+      <steps>
+        <step start="1560973789880" stop="1560973789880" status="passed">
+          <name>Dado que eu acesse a API de busca de endere&#xE7;o</name>
+          <title>Dado que eu acesse a API de busca de endere&#xE7;o</title>
+          <attachments/>
+        </step>
+        <step start="1560973789880" stop="1560973789880" status="passed">
+          <name>Quando informa o cep alfanumerico para buscar enderecos no metodo GET</name>
+          <title>Quando informa o cep alfanumerico para buscar enderecos no metodo GET</title>
+          <attachments/>
+        </step>
+        <step start="1560973789880" stop="1560973789881" status="passed">
+          <name>Ent&#xE3;o devera retornar a mensagem "ViaCEP Bad Request"</name>
+          <title>Ent&#xE3;o devera retornar a mensagem "ViaCEP Bad Request"</title>
+          <attachments/>
+        </step>
+      </steps>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="40005840"/>
+        <label name="host" value="dbs-note-473"/>
+        <label name="feature" value="API Via CEP"/>
+        <label name="story" value="Validar busca de endere&#xE7;o por CEP alfanum&#xE9;rico"/>
+      </labels>
+      <parameters/>
+    </test-case>
+  </test-cases>
+  <labels>
+    <label name="severity" value="normal"/>
+    <label name="thread" value="40005840"/>
+    <label name="host" value="dbs-note-473"/>
+  </labels>
+</ns2:test-suite>

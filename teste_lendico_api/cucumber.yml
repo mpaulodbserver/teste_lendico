@@ -1,0 +1,12 @@
+default: -p ci -p json -p dev
+
+pretty: --format pretty
+ci:  --format progress
+
+html:  --format html --out=results/report.html
+json:  --format json --out=results/report.json
+
+dev: ENVIRONMENT=dev
+hmg: ENVIRONMENT=hmg
+
+

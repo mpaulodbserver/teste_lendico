@@ -1,0 +1,292 @@
+[
+  {
+    "uri": "features/specifications/get_via_cep.feature",
+    "id": "api-via-cep",
+    "keyword": "Funcionalidade",
+    "name": "API Via CEP",
+    "description": "",
+    "line": 4,
+    "comments": [
+      {
+        "value": "#encoding: utf-8",
+        "line": 1
+      }
+    ],
+    "elements": [
+      {
+        "keyword": "Contexto",
+        "name": "Realizar busca de endereço por CEP",
+        "description": "",
+        "line": 7,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu acesse a API de busca de endereço",
+            "line": 8,
+            "match": {
+              "location": "features/steps_definitions/get_via_cep.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 173751
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-via-cep;validar-busca-de-endereço-por-cep-existente",
+        "keyword": "Cenário",
+        "name": "Validar busca de endereço por CEP existente",
+        "description": "",
+        "line": 11,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@BuscaPorCepExistente",
+            "line": 10
+          },
+          {
+            "name": "@getCep",
+            "line": 10
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "informa o cep existente para buscar enderecos no metodo GET",
+            "line": 12,
+            "match": {
+              "location": "features/steps_definitions/get_via_cep.rb:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1039582360
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devera retornar o endereco valido do CEP corretamente e status code 200",
+            "line": 13,
+            "output": [
+              "02118-001",
+              "São Paulo",
+              "200"
+            ],
+            "match": {
+              "location": "features/steps_definitions/get_via_cep.rb:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19273010
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Realizar busca de endereço por CEP",
+        "description": "",
+        "line": 7,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu acesse a API de busca de endereço",
+            "line": 8,
+            "match": {
+              "location": "features/steps_definitions/get_via_cep.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83791
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-via-cep;validar-busca-de-endereço-por-cep-existente",
+        "keyword": "Cenário",
+        "name": "Validar busca de endereço por CEP existente",
+        "description": "",
+        "line": 16,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@BuscaPorCepInexistente",
+            "line": 15
+          },
+          {
+            "name": "@getCep",
+            "line": 15
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "informa o cep inexistente para buscar enderecos no metodo GET",
+            "line": 17,
+            "match": {
+              "location": "features/steps_definitions/get_via_cep.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 797312101
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devera retornar a mensagem com o valor de \"erro\" igual a \"true\"",
+            "line": 18,
+            "output": [
+              "{\n  \"erro\": true\n}"
+            ],
+            "match": {
+              "location": "features/steps_definitions/get_via_cep.rb:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2208387
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Realizar busca de endereço por CEP",
+        "description": "",
+        "line": 7,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu acesse a API de busca de endereço",
+            "line": 8,
+            "match": {
+              "location": "features/steps_definitions/get_via_cep.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16964
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-via-cep;validar-formato-cep-com-mais-de-8-digitos",
+        "keyword": "Cenário",
+        "name": "Validar formato CEP com mais de 8 digitos",
+        "description": "",
+        "line": 21,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@validarFormatoCep9digitos",
+            "line": 20
+          },
+          {
+            "name": "@getCep",
+            "line": 20
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "informa o cep com mais de 8 digitos para buscar enderecos no metodo GET",
+            "line": 22,
+            "match": {
+              "location": "features/steps_definitions/get_via_cep.rb:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 711044660
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devera retornar a mensagem de erro \"ViaCEP Bad Request\" e status code 400",
+            "line": 23,
+            "output": [
+              "<h3>ViaCEP Bad Request (400)</h3>"
+            ],
+            "match": {
+              "location": "features/steps_definitions/get_via_cep.rb:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1456323
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "Realizar busca de endereço por CEP",
+        "description": "",
+        "line": 7,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu acesse a API de busca de endereço",
+            "line": 8,
+            "match": {
+              "location": "features/steps_definitions/get_via_cep.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 30843
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-via-cep;validar-busca-de-endereço-por-cep-alfanumérico",
+        "keyword": "Cenário",
+        "name": "Validar busca de endereço por CEP alfanumérico",
+        "description": "",
+        "line": 26,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@validarFormatoCepAlfanumerico",
+            "line": 25
+          },
+          {
+            "name": "@getCep",
+            "line": 25
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "informa o cep alfanumerico para buscar enderecos no metodo GET",
+            "line": 27,
+            "match": {
+              "location": "features/steps_definitions/get_via_cep.rb:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 706646392
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devera retornar a mensagem \"ViaCEP Bad Request\"",
+            "line": 28,
+            "output": [
+              "<h3>ViaCEP Bad Request (400)</h3>"
+            ],
+            "match": {
+              "location": "features/steps_definitions/get_via_cep.rb:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3984453
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

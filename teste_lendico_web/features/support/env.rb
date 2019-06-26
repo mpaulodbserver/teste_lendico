@@ -1,0 +1,55 @@
+require 'capybara'
+require 'capybara/cucumber'
+require 'byebug'
+require 'selenium-webdriver'
+require 'allure-cucumber'
+require 'site_prism'
+require 'rspec'
+require 'faker'
+require 'pry'
+require_relative 'helper.rb'
+require_relative 'page_helper.rb'
+
+
+World(Pages)
+World(Helper)
+
+ENVIRONMENT_TYPE = ENV['ENVIRONMENT_TYPE']
+HEADLESS = ENV['HEADLESS']
+
+CONFIG = YAML.load_file(File.dirname(__FILE__) + "/config/#{ENVIRONMENT_TYPE}.yml")
+DATA_FILE = YAML.load_file('features\support\config\data_file.yml')
+
+## register driver according with browser chosen
+Capybara.register_driver :selenium do |app|
+  if HEADLESS.eql?('headless')
+    option = ::Selenium::WebDriver::Chrome::Options.new(args: ['--headless', '--disable-gpu', '--window-size=1600,1024'])
+    Capybara::Selenium::Driver.new(app, browser: :chrome, options: option)
+
+  elsif HEADLESS.eql?('no_headless')
+    option = ::Selenium::WebDriver::Chrome::Options.new(args: ['--disable-infobars', 'window-size=1600,1024'])
+    Capybara::Selenium::Driver.new(app, browser: :chrome, options: option)
+  end
+end
+
+Capybara.configure do |config|
+  config.default_driver = :selenium
+  config.app_host = CONFIG['url_default']
+  config.default_max_wait_time = 30
+end
+
+Cucumber::Core::Test::Step.module_eval do
+  def name
+    return text if text == 'Before hook'
+    return text if text == 'After hook'
+    "#{source.last.keyword}#{text}"
+  end
+end
+
+AllureCucumber.configure do |c|
+  c.output_dir = "/output/dir"
+end
+
+AllureCucumber.configure do |c|
+  c.clean_dir  = false
+end
